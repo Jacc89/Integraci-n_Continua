@@ -1,0 +1,28 @@
+.navbar {
+  font-size: 1rem;
+  color: #f8f9fa;
+
+  .navbar-brand {
+    font-size: 1.25rem;
+    color: #f8f9fa;
+    &:hover {
+      color: #0c4402; // amarillo bootstrap
+    }
+  }
+  .navbar-item .btn {
+  font-size: 1.25rem;
+  color: #f8f9fa;
+  &:hover {
+    color: #0c4402; // amarillo bootstrap
+  }
+}
+
+    &.active {
+      font-weight: 600;
+      border-bottom: 2px solid #0c4402;
+    }
+
+    &:hover {
+      color: #0c4402;
+    }
+}

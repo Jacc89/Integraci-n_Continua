@@ -1,0 +1,43 @@
+<div class="d-flex  " >
+
+  <!-- Sidebar -->
+  <nav [ngClass]="{'d-none d-md-block': !sidebarOpen}" class="bg-success text-white flex-shrink-0 py-0 px-0 abc" >
+    <div class="mb-4 text-center">
+
+      <img src="img/logopoli.png" alt="Logo" class="img-fluid logo">
+    </div>
+    <ul class="nav nav-pills flex-column btn-dark">
+        <li class="nav-item">
+          <button
+            class="nav-link btn btn-dark text-bg-success w-100 "
+            (click)="goTo('listservices')">
+            Servicios
+          </button>
+        <li class="nav-item">
+           <button
+          class="nav-link btn btn-dark text-bg-success w-100"
+          (click)="goTo('users')">
+          Usuarios
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 ">
+    <!-- Header -->
+    <nav class="navbar navbar-dark bg-success px-3 ">
+      <button class="btn btn-outline-light d-md-none" (click)="toggleSidebar()">☰</button>
+      <span class="navbar-brand mx-2">TecnoSoluciones</span>
+      <div class="ms-auto d-flex align-items-center gap-2">
+        <span class="badge bg-light text-dark fw-bold">{{ username() | titlecase }}</span>
+        <button class="btn btn-outline-light btn-sm" (click)="cerrarSesion()">Salir</button>
+        <!-- <button class="btn btn-outline-light btn-sm" (click)="goHome()">Home</button> -->
+      </div>
+    </nav>
+     <!-- Contenido dinámico -->
+    <div class="container mt-5">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

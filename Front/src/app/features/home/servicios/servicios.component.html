@@ -1,0 +1,14 @@
+<section class="container my-5">
+      <h2 class="text-center mb-4">SERVICIOS</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4" *ngFor="let service of services">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <img src="{{ service.img }}" alt="{{ service.title }}" class="img-fluid mb-3 rounded" style="height: 200px; object-fit: cover;">
+              <h3 class="card-title">{{ service.title }}</h3>
+              <p class="card-text">{{ service.descripcion }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
